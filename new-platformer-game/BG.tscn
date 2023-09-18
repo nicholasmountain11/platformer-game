@@ -1,0 +1,71 @@
+[gd_scene load_steps=5 format=3 uid="uid://cqmjx58rpnirg"]
+
+[ext_resource type="Script" path="res://BG.gd" id="1_lf6ek"]
+[ext_resource type="Texture2D" uid="uid://djjs6ni46kjko" path="res://sunny-land/assets/environment/back.png" id="1_s2ti1"]
+[ext_resource type="Texture2D" uid="uid://c8t3bm4uxirin" path="res://sunny-land/assets/environment/middle.png" id="3_8pt3s"]
+[ext_resource type="Texture2D" uid="uid://do1hu1oruchb" path="res://Sunny Land Trees Props Pack /Props PNG/wooden-house.png" id="3_t8opd"]
+
+[node name="BG" type="ParallaxBackground"]
+script = ExtResource("1_lf6ek")
+
+[node name="Back" type="ParallaxLayer" parent="."]
+position = Vector2(4, -3)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Back" type="Sprite2D" parent="Back"]
+position = Vector2(572, 327)
+scale = Vector2(3, 2.7)
+texture = ExtResource("1_s2ti1")
+
+[node name="Houses" type="ParallaxLayer" parent="."]
+position = Vector2(4, -3)
+motion_mirroring = Vector2(1152, 0)
+
+[node name="Wooden-house" type="Sprite2D" parent="Houses"]
+position = Vector2(60, 347)
+texture = ExtResource("3_t8opd")
+
+[node name="Wooden-house2" type="Sprite2D" parent="Houses"]
+position = Vector2(396, 347)
+texture = ExtResource("3_t8opd")
+
+[node name="Wooden-house3" type="Sprite2D" parent="Houses"]
+position = Vector2(660, 339)
+texture = ExtResource("3_t8opd")
+
+[node name="Wooden-house4" type="Sprite2D" parent="Houses"]
+position = Vector2(1084, 347)
+texture = ExtResource("3_t8opd")
+
+[node name="Trees" type="ParallaxLayer" parent="."]
+position = Vector2(4, -3)
+motion_scale = Vector2(0.7, 1)
+motion_mirroring = Vector2(1232, 0)
+
+[node name="Middle" type="Sprite2D" parent="Trees"]
+position = Vector2(84, 475)
+texture = ExtResource("3_8pt3s")
+
+[node name="Middle2" type="Sprite2D" parent="Trees"]
+position = Vector2(260, 476)
+texture = ExtResource("3_8pt3s")
+
+[node name="Middle3" type="Sprite2D" parent="Trees"]
+position = Vector2(436, 475)
+texture = ExtResource("3_8pt3s")
+
+[node name="Middle4" type="Sprite2D" parent="Trees"]
+position = Vector2(612, 478)
+texture = ExtResource("3_8pt3s")
+
+[node name="Middle5" type="Sprite2D" parent="Trees"]
+position = Vector2(788, 479)
+texture = ExtResource("3_8pt3s")
+
+[node name="Middle6" type="Sprite2D" parent="Trees"]
+position = Vector2(964, 480)
+texture = ExtResource("3_8pt3s")
+
+[node name="Middle7" type="Sprite2D" parent="Trees"]
+position = Vector2(1140, 481)
+texture = ExtResource("3_8pt3s")

@@ -1,0 +1,58 @@
+[gd_scene load_steps=11 format=3 uid="uid://cjgn1m8ps7ln0"]
+
+[ext_resource type="Script" path="res://Collectables/Cherry.gd" id="1_7eof8"]
+[ext_resource type="Texture2D" uid="uid://bjhptji0kx1vs" path="res://Sunny-land-assets-files/PNG/sprites/cherry/cherry-1.png" id="1_73kfw"]
+[ext_resource type="Texture2D" uid="uid://dj5fdojr0rvp1" path="res://Sunny-land-assets-files/PNG/sprites/cherry/cherry-2.png" id="2_si8t8"]
+[ext_resource type="Texture2D" uid="uid://bfv6vwi14km3r" path="res://Sunny-land-assets-files/PNG/sprites/cherry/cherry-3.png" id="3_hp5h0"]
+[ext_resource type="Texture2D" uid="uid://bhf6y1a1iyvq2" path="res://Sunny-land-assets-files/PNG/sprites/cherry/cherry-4.png" id="4_ysot5"]
+[ext_resource type="Texture2D" uid="uid://f2xhewdk6n2t" path="res://Sunny-land-assets-files/PNG/sprites/cherry/cherry-5.png" id="5_bycck"]
+[ext_resource type="Texture2D" uid="uid://bxsxxqirlxkq3" path="res://Sunny-land-assets-files/PNG/sprites/cherry/cherry-6.png" id="6_gamp8"]
+[ext_resource type="Texture2D" uid="uid://dbn0aysg7m5iw" path="res://Sunny-land-assets-files/PNG/sprites/cherry/cherry-7.png" id="7_j448n"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_pgcyd"]
+radius = 17.0294
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ohtgq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_73kfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_si8t8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_hp5h0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_ysot5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_bycck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_gamp8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_j448n")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 5.0
+}]
+
+[node name="Cherry" type="Area2D"]
+script = ExtResource("1_7eof8")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-3, -1)
+shape = SubResource("CircleShape2D_pgcyd")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(1, -1)
+scale = Vector2(2.03571, 1.70199)
+sprite_frames = SubResource("SpriteFrames_ohtgq")
+animation = &"Idle"
+autoplay = "Idle"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
